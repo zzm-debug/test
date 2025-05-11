@@ -664,15 +664,15 @@ Enemy_Restore_Idle_alt_Node2::Enemy_Restore_Idle_alt_Node2()
 			int loop_num = 0;
 			if (Hash_disappear2[1] >= 5)
 			{
-				if (rand_num <= 60) enemy2->switch_state("wall_high");
-				else enemy2->switch_state("wall_low");
+				if (rand_num <= 60) enemy2->switch_state("wall_high_re");
+				else enemy2->switch_state("wall_low_re");
 				Hash_appear2[1] = 1;
 				Hash_appear2[2] = 0, Hash_appear2[3] = 0;
 				Hash_disappear2[1] = 0; Hash_disappear2[2]++; Hash_disappear2[3]++;
 			}
 			else if (Hash_disappear2[2] >= 5)
 			{
-				enemy2->switch_state("dstab");
+				enemy2->switch_state("dstab_re");
 				Hash_appear2[2] = 1;
 				Hash_appear2[1] = 0, Hash_appear2[3] = 0;
 				Hash_disappear2[2] = 0; Hash_disappear2[1]++; Hash_disappear2[3]++;
@@ -680,7 +680,7 @@ Enemy_Restore_Idle_alt_Node2::Enemy_Restore_Idle_alt_Node2()
 			}
 			else if (Hash_disappear2[3] >= 5)
 			{
-				enemy2->switch_state("dash");
+				enemy2->switch_state("dash_re");
 				Hash_appear2[3] = 1;
 				Hash_appear2[1] = 0, Hash_appear2[2] = 0;
 				Hash_disappear2[3] = 0; Hash_disappear2[2]++; Hash_disappear2[1]++;
@@ -868,7 +868,7 @@ Enemy_Back_Node2::Enemy_Back_Node2()
 		Throne2* enemy2 = (Throne2*)CharacterManager::instance()->get_enemy2();
 		if (enemy3->be_death && enemy2->be_death)
 		{
-			MessageBox(GetHWnd(), _T("任务成功"), _T("游戏结束"), MB_OK);
+			MessageBox(GetHWnd(), _T("脠脦脦帽鲁脡鹿娄"), _T("脫脦脧路陆谩脢酶"), MB_OK);
 			exit(0);
 		}
 		
